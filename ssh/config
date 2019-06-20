@@ -1,0 +1,9 @@
+Host MY_CUSTOM_HOST
+    User USERNAME_MATCHING_THE_KEY
+    HostName REMOTE_HOSTNAME_OR_REMOTE_IP_HERE
+    Port REMOTE_PORT_TO_CONNECT_VIA_SSH
+    IdentityFile ~/.ssh/.keys/KEY_NAME_HERE
+    TCPKeepAlive yes
+    ConnectTimeout 5
+    ServerAliveCountMax 10
+    ServerAliveInterval 15
