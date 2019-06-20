@@ -15,9 +15,13 @@ Although with Docker for Windows, due to the fact that the Docker daemon with Do
 - No ports are exposed from your localhost (Windows) environment into the Hyper-V VM running Docker (just the other way around)
 
 Therefore, there was no way (at least that I could find) to connect a remote Docker daemon into portainer without exposing it throught TCP.
-After some hours trying to understand the inner workings of what I've just explained the solution was kind of obvious...
+After hours trying to understand the inner workings of what I've just explained the solution was kind of obvious...
 You just need to ssh to your remote machine from somewhere reachable to the Portainer container, so, dockerize the SSH connection command and it should be reachable in your **bridge** connection.
 
+___
+
+Portainer team has something in the works. See [this](https://github.com/portainer/portainer/issues/431) for more information...
+___
 ## Usage
 
 While this image was made to solve a problem I was having with my Portainer setup, this repository image can be used to proxy any port running on any remote server you can access throught SSH.
